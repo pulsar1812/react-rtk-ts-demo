@@ -1,11 +1,9 @@
-import React from 'react';
-
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { ordered, restocked } from './cakeSlice';
+import { useAppSelector, useAppDispatch } from '../../app/hooks'
+import { ordered, restocked } from './cakeSlice'
 
 export const CakeView = () => {
-  const numOfCakes = useAppSelector((state) => state.cake.numOfCakes);
-  const dispatch = useAppDispatch();
+  const numOfCakes = useAppSelector((state) => state.cake.numOfCakes)
+  const dispatch = useAppDispatch()
 
   return (
     <div>
@@ -13,5 +11,5 @@ export const CakeView = () => {
       <button onClick={() => dispatch(ordered())}>Order cake</button>
       <button onClick={() => dispatch(restocked(5))}>Restock cakes</button>
     </div>
-  );
-};
+  )
+}

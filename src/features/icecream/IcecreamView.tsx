@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { ordered, restocked } from './icecreamSlice';
+import { useAppSelector, useAppDispatch } from '../../app/hooks'
+import { ordered, restocked } from './icecreamSlice'
 
 export const IcecreamView = () => {
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(1)
   const numOfIcecreams = useAppSelector(
     (state) => state.icecream.numOfIcecreams
-  );
-  const dispatch = useAppDispatch();
+  )
+  const dispatch = useAppDispatch()
 
   return (
     <div>
@@ -24,5 +24,5 @@ export const IcecreamView = () => {
         Restock ice creams
       </button>
     </div>
-  );
-};
+  )
+}

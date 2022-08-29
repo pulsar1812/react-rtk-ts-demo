@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { fetchUsers } from './userSlice';
+import { useAppSelector, useAppDispatch } from '../../app/hooks'
+import { fetchUsers } from './userSlice'
 
 export const UserView = () => {
-  const user = useAppSelector((state) => state.user);
-  const dispatch = useAppDispatch();
+  const user = useAppSelector((state) => state.user)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(fetchUsers());
-  }, []);
+    dispatch(fetchUsers())
+  }, [])
 
   return (
     <div>
@@ -24,5 +24,5 @@ export const UserView = () => {
         </ul>
       ) : null}
     </div>
-  );
-};
+  )
+}
